@@ -5,9 +5,10 @@
     --font-title: "Red Hat Display", sans-serif;
     --font-alt: "Playfair Display", serif;
     --bg-dark: #090909;
+    --bg-green: #00c932;
 }
 
-@theme{
+@theme {
     --font-alt: "Playfair Display", serif;
 }
 
@@ -21,18 +22,20 @@ h2,
 h3,
 h4,
 h5,
-h6, .font-title {
+h6,
+.font-title {
     font-family: var(--font-title);
 }
 
-.dark-bg{
+.dark-bg {
     background-color: var(--bg-dark);
 }
+
 .container {
     @apply w-11/12 mx-auto;
 }
 
-.blur-bg{
+.blur-bg {
     background-color: var(--bg-dark);
     backdrop-filter: blur(10px);
 }
@@ -41,92 +44,150 @@ h6, .font-title {
 /**
  * @css custom button animation 
  */
- 
 
 
-.animated_btn{
-	position: relative;
-	box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.4);
-	overflow: hidden;
+
+.animated_btn {
+    position: relative;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
     cursor: pointer;
     border-radius: 10px;
     z-index: 0;
 }
 
 .animated_btn .btn_b:nth-child(1) {
-	position: absolute;
-	top: 0;
-	right: 0;
-	width: 100%;
-	height: 3px;
-	background: linear-gradient(to right, var(--color-green-600), #ffffffb4);
-	animation: animate1 2s linear infinite;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, var(--color-green-600), #ffffffb4);
+    animation: animate1 2s linear infinite;
     z-index: 1;
 }
 
 @keyframes animate1 {
-	0% {
-		transform: translateX(-100%);
-	}
-	100% {
-		transform: translateX(100%);
-	}
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
 }
 
 .animated_btn .btn_b:nth-child(2) {
-	position: absolute;
-	top: 0;
-	right: 0;
-	height: 100%;
-	width: 3px;
-	background: linear-gradient(to bottom, var(--color-green-600), #ffffffb4);
-	animation: animate2 2s linear infinite;
-	animation-delay: 1s;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 3px;
+    background: linear-gradient(to bottom, var(--color-green-600), #ffffffb4);
+    animation: animate2 2s linear infinite;
+    animation-delay: 1s;
 }
+
 @keyframes animate2 {
-	0% {
-		transform: translateY(-100%);
-	}
-	100% {
-		transform: translateY(100%);
-	}
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(100%);
+    }
 }
 
 .animated_btn .btn_b:nth-child(3) {
-	position: absolute;
-	bottom: 0;
-	right: 0;
-	width: 100%;
-	height: 3px;
-	background: linear-gradient(to left, var(--color-green-600), #ffffffb4);
-	animation: animate3 2s linear infinite;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to left, var(--color-green-600), #ffffffb4);
+    animation: animate3 2s linear infinite;
 }
 
 @keyframes animate3 {
-	0% {
-		transform: translateX(100%);
-	}
-	100% {
-		transform: translateX(-100%);
-	}
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
 }
 
 .animated_btn .btn_b:nth-child(4) {
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 3px;
-	background: linear-gradient(to top, var(--color-green-600), #ffffffb4);
-	animation: animate4 2s linear infinite;
-	animation-delay: 1s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    background: linear-gradient(to top, var(--color-green-600), #ffffffb4);
+    animation: animate4 2s linear infinite;
+    animation-delay: 1s;
 }
 
 @keyframes animate4 {
-	0% {
-		transform: translateY(100%);
-	}
-	100% {
-		transform: translateY(-100%);
-	}
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+
+/*
+* @animated border box
+*/
+@media (min-width: 1000px) {
+
+    .animated-border-box,
+    .animated-border-box-glow {
+        overflow: hidden;
+        border-radius: 10px;
+    }
+
+    .animated-border-box-glow {
+        overflow: hidden;
+        filter: blur(20px);
+    }
+
+    .animated-border-box:before,
+    .animated-border-box-glow:before {
+        content: '';
+        z-index: -2;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(0deg);
+        position: absolute;
+        width: 99999px;
+        height: 99999px;
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-image: conic-gradient(rgba(0, 0, 0, 0), var(--bg-green), rgba(0, 0, 0, 0) 25%);
+        animation: rotate 4s linear infinite;
+    }
+
+    .animated-border-box:after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        left: 2.5px;
+        top: 2.5px;
+        width: calc(100% - 5px);
+        height: calc(100% - 5px);
+        border-radius: 7px;
+        background: #090909;
+    }
+
+    @keyframes rotate {
+        100% {
+            transform: translate(-50%, -50%) rotate(1turn);
+        }
+    }
 }

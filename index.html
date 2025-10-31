@@ -21,20 +21,32 @@
 </head>
 
 <body>
-  <main>
+  <main class="dark-bg">
 
     <header class="">
       <!-- logo wrapper -->
-      <div class="p-5 text-white dark-bg">
-        <h1 class="text-center @container">
+      <div class="p-5 mb-14 text-white ">
+        <h1 class="text-center ">
           <a href="#" class="text-3xl font-bold">coderemon</a>
         </h1>
       </div>
-
+      
+      <div class="animated-border-box-glow hidden lg:block"></div>
       <!-- navbar -->
-      <nav class="w-full text-white rounded-t-3xl fixed z-50 bottom-0">
+      <nav class="w-full text-white rounded-t-3xl fixed z-50 bottom-0
+        lg:w-[45%]
+        lg:bottom-6
+        lg:left-[50%]
+        lg:transform lg:translate-x-[-50%]
+        lg:rounded-3xl
+        lg:backdrop-blur-3xl
+        lg:inset-shadow-sm
+        lg:inset-shadow-green-900
+        lg:bg-[#090909]/60
+        animated-border-box
+      ">
         <!-- curve shape -->
-        <div class="z-[-1] fixed left-[50%] transform translate-x-[-50%] bottom-0">
+        <div class="z-[-1] lg:hidden fixed left-[50%] transform translate-x-[-50%] bottom-0">
           <svg xmlns="http://www.w3.org/2000/svg" width="388" height="92" viewBox="0 0 375 92" fill="none"
             class="rd-navbar_curve-shape __web-inspector-hide-shortcut__">
             <g filter="url(#filter0_i_14_1436)">
@@ -62,67 +74,77 @@
         <!-- menu items -->
         <div>
           <div class="flex justify-between">
-            <ul class="flex py-[16px] rounded-tl-2xl 
+            <ul class="flex py-[16px] lg:py-[26px] rounded-tl-2xl 
                 rounded-tr-lg
                 w-[40%]
                 h-[5.78rem]
-                justify-around gap-5 dark-bg
+                lg:h-[5.3rem]
+                justify-around gap-5 bg-[#090909]
                 sm:rounded-tr-0
                 px-2
+                lg:bg-transparent
                 ">
               <li>
                 <a href="#" class="flex flex-col text-center justify-center">
-                  <p><i class="fas fa-folder-open"></i></p>
-                  <p class="text-xs mt-1 uppercase">Projects</p>
+                  <p class="lg:hidden"><i class="fas fa-folder-open"></i></p>
+                  <p class="text-xs mt-1 lg:capitalize lg:text-lg uppercase">Projects</p>
                 </a>
               </li>
               <li>
                 <a href="#" class="flex flex-col text-center justify-center">
-                  <p>
+                  <p class="lg:hidden">
                     <i class="fab fa-servicestack"></i>
                   </p>
-                  <p class="uppercase mt-1 text-xs">Services</p>
+                  <p class="uppercase mt-1 lg:capitalize lg:text-lg text-xs">Services</p>
                 </a>
               </li>
             </ul>
+            
             <div class="start_project">
               <a href="#" class="flex flex-col text-center justify-center dark-bg
                     h-14.5
                     w-14.5
+                    lg:w-60
                     items-center
                     rounded-xl
-                    border-2 border-green-600
+                    border border-green-600
                     relative
                     top-[-1.2rem]
                     text-3xl
+                    text-white
+                    lg:top-[1rem]
+                    lg:text-xl
                 ">
-                <p>
+                <p class="lg:hidden">
                   <i class="fab fa-slack"></i>
                 </p>
-                <p class="hidden md:visible">Start Project</p>
+                <p class="hidden lg:block">Start Project</p>
               </a>
             </div>
-            <ul class="flex py-[14px] 
+            
+            <ul class="flex py-[14px] lg:py-[26px] 
                 rounded-tl-lg rounded-tr-2xl 
                  w-[40%]
                  h-[5.78rem]
-                 justify-around gap-5 dark-bg
+                 lg:h-[5.5rem]
+                 justify-around gap-5 bg-[#090909]
+                 lg:bg-transparent
                  px-2
                  ">
               <li>
                 <a href="#" class="flex flex-col text-center justify-center">
-                  <p>
+                  <p class="lg:hidden">
                     <i class="far fa-usd-circle"></i>
                   </p>
-                  <p class="text-xs mt-1 uppercase">Pricing</p>
+                  <p class="text-xs mt-1 lg:capitalize lg:text-lg uppercase">Pricing</p>
                 </a>
               </li>
               <li>
                 <a href="#" class="flex flex-col text-center justify-center">
-                  <p>
+                  <p class="lg:hidden">
                     <i class="fal fa-bars"></i>
                   </p>
-                  <p class="text-xs mt-1 uppercase">More</p>
+                  <p class="text-xs mt-1 lg:capitalize lg:text-lg uppercase">More</p>
                 </a>
               </li>
             </ul>
@@ -149,9 +171,12 @@
           <h3 class="
                text-md
                leading-6
+               mb-5
+               lg:font-semibold
+               lg:text-2xl
               ">Turning Complex Logic into Seamless Web Experiences</h3>
 
-          <h2 class="text-3xl md:text-4xl font-semibold text-white text-center leading-6">
+          <h2 class="text-3xl lg:text-7xl font-semibold text-white text-center leading-6 lg:leading-18 lg:mb-4">
             We <span class="italic font-[Playfair_Display] text-gray-200">Build</span> the Backbone
             <div class="flex gap-2 items-center justify-center">
               <p>That</p>
@@ -187,9 +212,6 @@
             <span class="italic font-[Playfair_Display] text-gray-200">Powers</span> Results
           </h2>
 
-
-
-
           <p class="
           ring-2 ring-[#00502b91]
           text-center
@@ -203,6 +225,9 @@
           gap-2
           mb-7
           mt-3
+          lg:w-98
+          lg:mx-auto
+          lg:mb-10
           ">
             <span class="relative flex size-3">
               <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-600 opacity-75"></span>
@@ -215,6 +240,9 @@
             items-center justify-center
             bg-green-600 text-white
             mb-20
+            lg:w-50
+            lg:mx-auto
+            
           ">
             <span class="btn_b"></span>
             <span class="btn_b"></span>
