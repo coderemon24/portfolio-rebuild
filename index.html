@@ -10,11 +10,11 @@
   <!-- fontawesome -->
   <link rel="stylesheet" href="./assets//fontawesome//css/all.min.css" />
   <!-- google fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap"
-    rel="stylesheet" />
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+    rel="stylesheet">
   <!-- tailwindcss -->
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <link rel="stylesheet" href="./assets/css/style.css" />
@@ -22,31 +22,22 @@
 
 <body>
   <main class="dark-bg">
+    <header class="
 
-    <header class="">
+      ">
       <!-- logo wrapper -->
-      <div class="p-5 mb-14 text-white ">
-        <h1 class="text-center ">
+      <div class="p-5 mb-18 text-white">
+        <h1 class="text-center">
           <a href="#" class="text-3xl font-bold">coderemon</a>
         </h1>
       </div>
-      
-      <div class="animated-border-box-glow hidden lg:block"></div>
+
+      <div class="hidden animated-border-box-glow lg:block"></div>
       <!-- navbar -->
-      <nav class="w-full text-white rounded-t-3xl fixed z-50 bottom-0
-        lg:w-[45%]
-        lg:bottom-6
-        lg:left-[50%]
-        lg:transform lg:translate-x-[-50%]
-        lg:rounded-3xl
-        lg:backdrop-blur-3xl
-        lg:inset-shadow-sm
-        lg:inset-shadow-green-900
-        lg:bg-[#090909]/60
-        animated-border-box
-      ">
+      <nav
+        class="z-50 w-full text-white rounded-t-3xl fixed bottom-0 animated-border-box lg:w-[45%] lg:bg-[#090909]/60 lg:rounded-3xl lg:bottom-6 lg:left-[50%] lg:transform lg:translate-x-[-50%] lg:backdrop-blur-3xl lg:inset-shadow-sm lg:inset-shadow-green-900">
         <!-- curve shape -->
-        <div class="z-[-1] lg:hidden fixed left-[50%] transform translate-x-[-50%] bottom-0">
+        <div class="z-[-1] fixed left-[50%] transform translate-x-[-50%] bottom-0 lg:hidden">
           <svg xmlns="http://www.w3.org/2000/svg" width="388" height="92" viewBox="0 0 375 92" fill="none"
             class="rd-navbar_curve-shape __web-inspector-hide-shortcut__">
             <g filter="url(#filter0_i_14_1436)">
@@ -74,77 +65,62 @@
         <!-- menu items -->
         <div>
           <div class="flex justify-between">
-            <ul class="flex py-[16px] lg:py-[26px] rounded-tl-2xl 
-                rounded-tr-lg
-                w-[40%]
-                h-[5.78rem]
-                lg:h-[5.3rem]
-                justify-around gap-5 bg-[#090909]
-                sm:rounded-tr-0
-                px-2
-                lg:bg-transparent
-                ">
+            <ul
+              class="flex w-[40%] h-[5.78rem] py-[16px] px-2 bg-[#090909] rounded-tl-2xl rounded-tr-lg justify-around gap-5 sm:rounded-tr-0 lg:h-[5.3rem] lg:py-[26px] lg:bg-transparent">
               <li>
-                <a href="#" class="flex flex-col text-center justify-center">
+                <a href="#"
+                  class="flex flex-col text-center hover:text-green-500 transition duration-300 justify-center">
                   <p class="lg:hidden"><i class="fas fa-folder-open"></i></p>
-                  <p class="text-xs mt-1 lg:capitalize lg:text-lg uppercase">Projects</p>
+                  <p class="mt-1 text-xs uppercase lg:text-lg lg:capitalize">
+                    Projects
+                  </p>
                 </a>
               </li>
               <li>
-                <a href="#" class="flex flex-col text-center justify-center">
+                <a href="#"
+                  class="flex flex-col text-center hover:text-green-500 transition duration-300 justify-center">
                   <p class="lg:hidden">
                     <i class="fab fa-servicestack"></i>
                   </p>
-                  <p class="uppercase mt-1 lg:capitalize lg:text-lg text-xs">Services</p>
+                  <p class="mt-1 text-xs uppercase lg:text-lg lg:capitalize">
+                    Services
+                  </p>
                 </a>
               </li>
             </ul>
-            
+
             <div class="start_project">
-              <a href="#" class="flex flex-col text-center justify-center dark-bg
-                    h-14.5
-                    w-14.5
-                    lg:w-60
-                    items-center
-                    rounded-xl
-                    border border-green-600
-                    relative
-                    top-[-1.2rem]
-                    text-3xl
-                    text-white
-                    lg:top-[1rem]
-                    lg:text-xl
-                ">
+              <a href="#"
+                class="flex flex-col h-14.5 w-14.5 text-center text-3xl text-white rounded-xl border border-green-600 justify-center dark-bg items-center relative top-[-1.2rem] lg:w-60 lg:text-xl lg:top-[1rem]">
                 <p class="lg:hidden">
                   <i class="fab fa-slack"></i>
                 </p>
                 <p class="hidden lg:block">Start Project</p>
               </a>
             </div>
-            
-            <ul class="flex py-[14px] lg:py-[26px] 
-                rounded-tl-lg rounded-tr-2xl 
-                 w-[40%]
-                 h-[5.78rem]
-                 lg:h-[5.5rem]
-                 justify-around gap-5 bg-[#090909]
-                 lg:bg-transparent
-                 px-2
-                 ">
+
+            <ul
+              class="flex w-[40%] h-[5.78rem] py-[14px] px-2 bg-[#090909] rounded-tl-lg rounded-tr-2xl justify-around gap-5 lg:h-[5.5rem] lg:py-[26px] lg:bg-transparent">
               <li>
-                <a href="#" class="flex flex-col text-center justify-center">
+                <a href="#"
+                  class="flex flex-col text-center hover:text-green-500 transition duration-300 justify-center">
                   <p class="lg:hidden">
                     <i class="far fa-usd-circle"></i>
                   </p>
-                  <p class="text-xs mt-1 lg:capitalize lg:text-lg uppercase">Pricing</p>
+                  <p class="mt-1 text-xs uppercase lg:text-lg lg:capitalize">
+                    Pricing
+                  </p>
                 </a>
               </li>
               <li>
-                <a href="#" class="flex flex-col text-center justify-center">
+                <a href="#"
+                  class="flex flex-col text-center hover:text-green-500 transition duration-300 justify-center">
                   <p class="lg:hidden">
                     <i class="fal fa-bars"></i>
                   </p>
-                  <p class="text-xs mt-1 lg:capitalize lg:text-lg uppercase">More</p>
+                  <p class="mt-1 text-xs uppercase lg:text-lg lg:capitalize">
+                    More
+                  </p>
                 </a>
               </li>
             </ul>
@@ -154,96 +130,100 @@
     </header>
 
     <!-- hero section -->
-    <section class="hero h-screen dark-bg text-white">
-      <div class="container mx-auto w-11/12 py-5">
-        <div class="text-center flex flex-col gap-5">
+    <section class="h-screen text-white hero dark-bg">
+      <div class="container w-11/12 mx-auto py-5">
+        <div class="flex flex-col text-center gap-5">
           <div class="
-                w-[100px]
-                h-[100px]
-                rounded-full
-                overflow-hidden
-                mx-auto
-                border-4
-                border-green-600
-              ">
-            <img width="100%" src="./assets/images/emon.png" alt="emon">
+            relative
+            w-[150px]
+            h-[100px]
+            mx-auto
+            ">
+            <div class="overflow-hidden w-[100px] h-[100px] mx-auto rounded-full border-4 border-green-600 relative">
+              <img width="100%" src="./assets/images/emon.png" alt="emon" />
+            </div>
+            <p class="
+                relative
+                z-[50]
+                -top-40
+                -right-15
+                bg-white
+                text-green-700
+                px-0
+                py-2
+                rounded
+                inset-shadow-sm
+                inset-shadow-green-900
+                text-lg
+                before:content-['']
+                before:absolute
+                before:-bottom-2
+                before:left-3
+                before:w-0
+                before:h-0
+                before:border-10
+                before:border-white
+                before:border-t-transparent
+                before:border-r-transparent
+                before:-rotate-45
+                before:rounded
+                before:z-[-1]
+                font-[source_code_pro]
+              ">Ahmed Emon</p>
           </div>
-          <h3 class="
-               text-md
-               leading-6
-               mb-5
-               lg:font-semibold
-               lg:text-2xl
-              ">Turning Complex Logic into Seamless Web Experiences</h3>
 
-          <h2 class="text-3xl lg:text-7xl font-semibold text-white text-center leading-6 lg:leading-18 lg:mb-4">
-            We <span class="italic font-[Playfair_Display] text-gray-200">Build</span> the Backbone
+          <h3 class="mb-5 text-md leading-6 lg:font-semibold lg:text-2xl">
+            Turning Complex Logic into Seamless Web Experiences
+          </h3>
+
+          <h2 class="text-3xl font-semibold text-white text-center leading-6 lg:mb-4 lg:text-7xl lg:leading-18">
+            We
+            <span class="font-[Playfair_Display] text-gray-200 italic">Build</span>
+            the Backbone
             <div class="flex gap-2 items-center justify-center">
               <p>That</p>
-              <div class="flex items-center justify-center mt-3 mb-3">
-
+              <div class="flex mt-3 mb-3 items-center justify-center">
                 <!-- Icon 1 -->
                 <div
-                  class="w-10 h-10 bg-white rounded-full overflow-hidden border border-[#090909] flex items-center justify-center p-1.5 z-[1]">
-                  <img src="./assets/images/icons/docker.svg" alt="Docker" class="w-full h-full object-contain">
+                  class="overflow-hidden flex z-[1] w-10 h-10 p-1.5 bg-white rounded-full border border-[#090909] items-center justify-center">
+                  <img src="./assets/images/icons/docker.svg" alt="Docker" class="object-contain w-full h-full" />
                 </div>
 
                 <!-- Icon 2 (slightly overlapping previous one) -->
                 <div
-                  class="w-10 h-10 bg-white rounded-full overflow-hidden border border-[#090909] flex items-center justify-center p-1.5 -ml-3 z-[2]">
-                  <img src="./assets/images/icons/aws.svg" alt="AWS" class="w-full h-full object-contain">
+                  class="overflow-hidden flex z-[2] w-10 h-10 p-1.5 bg-white rounded-full border border-[#090909] items-center justify-center -ml-3">
+                  <img src="./assets/images/icons/aws.svg" alt="AWS" class="object-contain w-full h-full" />
                 </div>
 
                 <!-- Icon 3 -->
                 <div
-                  class="w-10 h-10 bg-white rounded-full overflow-hidden border border-[#090909] flex items-center justify-center p-1.5 -ml-3 z-[3]">
-                  <img src="./assets/images/icons/github.svg" alt="GitHub" class="w-full h-full object-contain">
+                  class="overflow-hidden flex z-[3] w-10 h-10 p-1.5 bg-white rounded-full border border-[#090909] items-center justify-center -ml-3">
+                  <img src="./assets/images/icons/github.svg" alt="GitHub" class="object-contain w-full h-full" />
                 </div>
 
                 <!-- Icon 4 -->
                 <div
-                  class="w-10 h-10 bg-white rounded-full overflow-hidden border border-[#090909] flex items-center justify-center p-1.5 -ml-3 z-[4]">
-                  <img src="./assets/images/icons/postman.svg" alt="Postman" class="w-full h-full object-contain">
+                  class="overflow-hidden flex z-[4] w-10 h-10 p-1.5 bg-white rounded-full border border-[#090909] items-center justify-center -ml-3">
+                  <img src="./assets/images/icons/postman.svg" alt="Postman" class="object-contain w-full h-full" />
                 </div>
-
               </div>
             </div>
 
-            <span class="italic font-[Playfair_Display] text-gray-200">Powers</span> Results
+            <span class="font-[Playfair_Display] text-gray-200 italic">Powers</span>
+            Results
           </h2>
 
-          <p class="
-          ring-2 ring-[#00502b91]
-          text-center
-          py-2.5
-          px-2
-          text-sm
-          rounded-full
-          flex
-          items-center
-          justify-center
-          gap-2
-          mb-7
-          mt-3
-          lg:w-98
-          lg:mx-auto
-          lg:mb-10
-          ">
-            <span class="relative flex size-3">
-              <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-600 opacity-75"></span>
-              <span class="relative inline-flex size-3 rounded-full bg-green-600"></span>
+          <p
+            class="flex py-2.5 px-2 mb-7 mt-3 text-center text-sm rounded-full ring-2 ring-[#00502b91] items-center justify-center gap-2 lg:w-98 lg:mx-auto lg:mb-10">
+            <span class="flex relative size-3">
+              <span class="inline-flex h-full w-full bg-green-600 rounded-full animate-ping opacity-75 absolute"></span>
+              <span class="inline-flex bg-green-600 rounded-full relative size-3"></span>
             </span>
             Empowering 55+ clients with robust web solutions
           </p>
 
-          <a href="#" class="animated_btn p-4 flex gap-2 
-            items-center justify-center
-            bg-green-600 text-white
-            mb-20
-            lg:w-50
-            lg:mx-auto
-            
-          ">
+          <a href="#"
+            class="flex p-4 mb-20 text-white bg-green-600 animated_btn gap-2 items-center justify-center lg:w-50 lg:mx-auto">
             <span class="btn_b"></span>
             <span class="btn_b"></span>
             <span class="btn_b"></span>
@@ -255,7 +235,6 @@
         </div>
       </div>
     </section>
-
   </main>
 
   <!-- scripts -->

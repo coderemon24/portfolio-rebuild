@@ -6,6 +6,7 @@
     --font-alt: "Playfair Display", serif;
     --bg-dark: #090909;
     --bg-green: #00c932;
+    --font-code: "Source Code Pro", monospace;
 }
 
 @theme {
