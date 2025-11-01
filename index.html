@@ -133,16 +133,18 @@
     <section class="h-screen relative text-white hero dark-bg">
       <div class="container w-11/12 mx-auto py-5">
         <div class="flex flex-col text-center gap-5">
-          <div class="
+          <div class="relative">
+            <div class="
             relative
             w-[150px]
             h-[100px]
             mx-auto
             ">
-            <div class="overflow-hidden w-[100px] h-[100px] mx-auto rounded-full border-4 border-green-600 relative">
-              <img width="100%" src="./assets/images/emon.png" alt="emon" />
-            </div>
-            <p class="
+              <div
+                class="overflow-hidden cursor-pointer self_shape w-[100px] h-[100px] mx-auto rounded-full border-4 border-green-600 relative">
+                <img width="100%" src="./assets/images/emon.png" alt="emon" />
+              </div>
+              <p class="
                 relative
                 z-[50]
                 -top-40
@@ -170,6 +172,130 @@
                 before:z-[-1]
                 font-[source_code_pro]
               ">Ahmed Emon</p>
+            </div>
+
+            <div class="
+                flex items-center
+                justify-center
+                relative
+              ">
+              <div class="
+                 bg-white w-full sm:w-2/3 md:w-7/8 lg:w-4/5
+                  text-green-600 xl:w-3/5
+                mx-auto !font-[source_code_pro]
+                inset-shadow-sm inset-shadow-green-900 rounded-xl
+                p-7 text-left top-[1.3rem] self_details 
+                invisible opacity-0 
+                transition-all duration-500
+                 grid grid-cols-1 md:grid-cols-3 gap-8
+                 absolute
+                      z-50
+                      before:content-['']
+                      before:absolute
+                      before:top-[-0.6rem]
+                      before:left-1/2
+                      before:-translate-x-1/2
+                      before:w-0
+                      before:h-0
+                      before:border-16
+                      before:border-white
+                      before:border-t-transparent
+                      before:border-r-transparent
+                      before:-z-100
+                      before:rotate-135
+                      before:rounded-md
+                      before:inset-shadow-sm
+                      before:inset-shadow-green-600
+                 ">
+                <div class="
+                      md:col-span-2
+                    ">
+                  <h2 class="!font-[source_code_pro] font-semibold xl:text-3xl text-lg">
+                    
+                    Md. Limon Ahmed [Emon]
+                  </h2>
+                  <span class="font-medium xl:text-2xl">Software Engineer</span>
+
+                  <div class="mt-3 xl:mt-5 flex flex-col xl:text-xl gap-1">
+                    <p>
+                      Frontend: Tailwind, Vue, React, Alpine, Livewire
+                    </p>
+                    <p>
+                      Backend: PHP/Laravel, Golang, Node.js
+                    </p>
+                    <p>
+                      Database: MySQL, PostgreSQL
+                    </p>
+                    <p>
+                      Tools: Docker, AWS, Postman, Git
+                    </p>
+                  </div>
+                  
+                  <div class="
+                  flex gap-4 xl:gap-8
+                  mt-4 xl:mt-5
+                  ">
+                    
+                    <a href="https://github.com/coderemon24" target="_blank" class="
+                     
+                      flex
+                      items-center
+                      gap-2
+                      !font-[source_code_pro]
+                      bg-[var(--bg-dark)]
+                      text-white
+                      px-3
+                      py-2
+                      rounded-lg
+                      max-w-[130px]
+                      text-sm
+                    ">
+                      <span class="">
+                        <i class="fab fa-github"></i>
+                      </span>
+                      <span>GitHub</span>
+                    </a>
+                    
+                    <a href="https://www.linkedin.com/in/nullspectre" target="_blank" class="
+                      
+                      flex
+                      items-center
+                      gap-2
+                      !font-[source_code_pro]
+                      bg-[var(--bg-dark)]
+                      text-white
+                      px-3
+                      py-2
+                      rounded-lg
+                      max-w-[135px]
+                      text-sm
+                    ">
+                      <span class="">
+                        <i class="fab fa-linkedin"></i>
+                      </span>
+                      <span>LinkedIn</span>
+                    </a>
+                    
+                  </div>
+
+                </div>
+
+                <div class="
+                      hidden md:flex
+                      md:items-end
+                      overflow-hidden
+                      self_shape
+                      max-w-[300px]
+                      bg-gray-100
+                      ms-auto
+                      rounded-3xl
+                      pt-18
+                    ">
+                  <img width="100%" src="./assets/images/emon-transparent.png" alt="emon-ahmed">
+                </div>
+              </div>
+            </div>
+
           </div>
 
           <h3 class="mb-5 text-md md:w-1/2 md:mx-auto leading-6 lg:font-semibold lg:text-2xl">
@@ -234,12 +360,13 @@
           </a>
         </div>
       </div>
-      
+
     </section>
-    
+
   </main>
 
   <!-- scripts -->
+  <script src="./assets//js/jquery.min.js"></script>
   <script src="./assets/js/app.js"></script>
 </body>
 
