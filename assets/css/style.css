@@ -203,3 +203,10 @@ h6,
 .work_card:hover .work_icon {
     color: var(--color-green-600);
 }
+.arrow-right{
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+.menu_item:hover .arrow-right{
+    visibility: visible;
+}
