@@ -39,7 +39,7 @@
       <!-- navbar -->
       <nav
         class="z-50 w-full text-white rounded-t-3xl fixed
-         bottom-0  lg:w-[45%] lg:bg-[#090909]/60 
+         bottom-0  lg:w-[50%] lg:bg-[#090909]/60 
          lg:rounded-3xl lg:bottom-6 lg:left-[50%] lg:transform 
          lg:translate-x-[-50%] lg:backdrop-blur-3xl lg:inset-shadow-sm 
          lg:inset-shadow-green-900">
@@ -75,11 +75,11 @@
         <div>
           <div class="flex justify-between">
             <ul
-              class="flex w-[40%] h-[5.78rem] py-[16px] px-2 bg-[#090909] 
-              rounded-tl-2xl rounded-tr-lg justify-around gap-5 sm:rounded-tr-0 lg:h-[5.3rem] 
-              lg:py-[26px] lg:bg-transparent">
+              class="flex w-[40%] h-[5.78rem]  bg-[#090909] 
+              rounded-tl-2xl rounded-tr-lg justify-around sm:rounded-tr-0 lg:h-[5.3rem] 
+               lg:bg-transparent">
               
-              <li>
+              <li class="cursor-pointer py-7 px-5">
                 <a href="#"
                   class="flex flex-col text-center hover:text-green-500 transition duration-300 justify-center">
                   <p class="lg:hidden"><i class="fas fa-folder-open"></i></p>
@@ -89,7 +89,7 @@
                 </a>
               </li>
               
-              <li>
+              <li class="cursor-pointer py-7 px-5">
                 <a href="#"
                   class="flex flex-col text-center hover:text-green-500 transition duration-300 justify-center">
                   <p class="lg:hidden">
@@ -105,7 +105,10 @@
 
             <div class="start_project">
               <a href="#"
-                class="flex flex-col h-14.5 w-14.5 text-center text-3xl text-white rounded-xl border border-green-600 justify-center dark-bg items-center relative top-[-1.2rem] lg:w-60 lg:text-xl lg:top-[1rem]">
+                class="flex flex-col h-14.5 w-14.5 text-center text-3xl
+                 text-white rounded-xl border border-green-600 
+                 justify-center dark-bg items-center relative 
+                 top-[-1.2rem] lg:w-50 lg:text-xl lg:top-[1rem]">
                 <p class="lg:hidden">
                   <i class="fab fa-slack"></i>
                 </p>
@@ -114,11 +117,11 @@
             </div>
 
             <ul
-              class="flex w-[40%] h-[5.78rem] py-[14px] px-2
+              class="flex w-[40%] h-[5.78rem]  px-2
                bg-[#090909] rounded-tl-lg rounded-tr-2xl justify-around 
-               gap-5 lg:h-[5.5rem] lg:py-[26px] lg:bg-transparent">
+              lg:h-[5.5rem]  lg:bg-transparent">
               
-              <li>
+              <li class="cursor-pointer py-7 px-5">
                 <a href="#"
                   class="flex flex-col text-center hover:text-green-500 
                   transition duration-300 justify-center">
@@ -131,12 +134,12 @@
                 </a>
               </li>
               
-              <li class="mega_view">
-                <a href="#"
+              <li class="mega_view group cursor-pointer py-7 px-5">
+                <a href="javascript:void(0)"
                   class="flex flex-col text-center
                    hover:text-green-500 transition 
                    duration-300 justify-center 
-            
+                   
                    ">
                   <p class="lg:hidden">
                     <i class="fal fa-bars"></i>
@@ -150,13 +153,53 @@
                     bg-white w-full lg:w-[800px] absolute top-100 left-0 text-black
                      rounded-t-3xl overflow-hidden -z-10 lg:z-50
                      transition-all duration-500 meta_card
-                     lg:overflow-auto lg:-top-125 lg:rounded-3xl
-                     lg:grid lg:grid-cols-2 lg:gap-3
+                     lg:overflow-visible lg:-top-139 lg:rounded-3xl
+                     lg:grid lg:grid-cols-2 lg:gap-10
                      lg:p-10 lg:transform lg:left-1/2 lg:-translate-x-1/2
+                     lg:after:content-['']
+                     lg:after:absolute
+                     lg:after:bottom-[-0.8rem]
+                     lg:after:right-30
+                     lg:after:w-0
+                     lg:after:h-0
+                     lg:after:border-16
+                    lg:after:border-white
+                     lg:after:border-t-transparent
+                     lg:after:border-r-transparent
+                     lg:after:-rotate-45
+                     lg:after:-z-50
+                     lg:after:rounded
+                     invisible opacity-0
+                     lg:tranistion-all lg:duration-400
+                     group-hover:visible group-hover:opacity-100
                   ">
                   
-                    <div>
-                      
+                    <div class="
+                    bg-gray-100
+                    overflow-hidden
+                    border border-gray-300
+                    rounded-3xl work_card cursor-pointer
+                    hidden lg:block
+                    ">
+                       <a href="#">
+                          <div class="mb-3 p-4 pb-6">
+                            <h3 class="font-bold flex justify-between mb-2 text-[var(--bg-dark)] text-2xl">
+                              <span>Our Latest Work</span>
+                              <span class="rotate-45 work_icon transition-all duration-300">
+                                <i class="fal fa-arrow-up"></i>
+                              </span>
+                            </h3>
+                            <p class="text-gray-400 text-thin">
+                              Discover our most recent projects, showcasing creativity, innovation, and quality. Each work reflects our dedication to turning ideas into exceptional results.
+                            </p>
+                          </div>
+                          <div class="
+                           overflow-hidden
+                           h-[260px]
+                          ">
+                            <img class="w-full h-full work_img transition-all duration-300 " src="./assets//images/work-service.png" alt="work-service">
+                          </div>
+                       </a>
                     </div>
                   
                     <div>

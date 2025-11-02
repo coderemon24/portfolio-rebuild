@@ -193,3 +193,13 @@ h6,
     }
 }
 
+/*
+* @work card -> img hover
+*/
+
+.work_card:hover .work_img {
+    transform: scale(1.2);
+}
+.work_card:hover .work_icon {
+    color: var(--color-green-600);
+}
