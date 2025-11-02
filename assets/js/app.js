@@ -26,6 +26,25 @@ $(function () {
         self_name.removeClass('invisible opacity-0');
     });
     
+    // on hover show mega card
+    let mega_view = $('.mega_view');
+    let meta_card = $('.meta_card');
+    
+    mega_view.mouseenter(function () {
+        meta_card.removeClass('top-100').addClass('-top-100');
+    });
+    
+    mega_view.mouseleave(function () {
+        meta_card.mouseenter(function () {
+            meta_card.removeClass('top-100').addClass('-top-100');
+        })
+        
+        meta_card.mouseleave(function () {
+            meta_card.addClass('top-100').removeClass('-top-100');
+        })
+        meta_card.addClass('top-100').removeClass('-top-100');
+    });
+    
     
     
 });
