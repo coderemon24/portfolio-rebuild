@@ -27,7 +27,7 @@
 
       ">
       <!-- logo wrapper -->
-      <div class="p-5 mb-18 text-white">
+      <div class="p-5 mb-10 text-white">
         <h1 class="text-center">
           <a href="#" class="text-3xl font-bold">
             <img class="w-45 md:w-50 xl:60 mx-auto" src="./assets/images/logo/coderemon-x.png" alt="logo">
@@ -35,7 +35,6 @@
         </h1>
       </div>
 
-      <div class="hidden animated-border-box-glow lg:block"></div>
       <!-- navbar -->
       <nav
         class="z-50 w-full text-white rounded-t-3xl fixed
@@ -104,16 +103,17 @@
             </ul>
 
             <div class="start_project">
+              <div class=" animated-border-box-glow "></div>
               <a href="#"
                 class="flex flex-col h-14.5 w-14.5 text-center text-3xl
-                 text-white rounded-xl border border-green-600 
+                 text-white rounded-xl border border-green-600/30 
                  justify-center dark-bg items-center relative 
                  top-[-1.2rem] lg:h-12 lg:top-[1.5rem] lg:w-30 xl:w-50 
-                 lg:text-lg xl:text-xl xl:top-[1rem]">
-                <p class="lg:hidden ">
+                 lg:text-lg xl:text-xl xl:top-[1rem] animated-border-box">
+                <p class="lg:hidden relative z-50">
                   <i class="fab fa-slack"></i>
                 </p>
-                <p class="hidden lg:block">Start Project</p>
+                <p class="hidden lg:block relative z-50">Start Project</p>
               </a>
             </div>
 
@@ -140,7 +140,7 @@
                   class="flex flex-col text-center
                    hover:text-green-500 transition 
                    duration-300 justify-center 
-                   
+                   group-hover:text-green-500
                    ">
                   <p class="lg:hidden">
                     <i class="fal fa-bars"></i>
@@ -315,6 +315,7 @@
             </ul>
           </div>
         </div>
+        
       </nav>
     </header>
 
@@ -358,7 +359,7 @@
                 before:border-t-transparent
                 before:border-r-transparent
                 before:-rotate-45
-                before:rounded
+                before:rounded-xs
                 before:z-[-1]
                 font-[source_code_pro]
                 transition-all duration-500
@@ -423,7 +424,7 @@
                   </div>
                   
                   <div class="
-                  flex gap-4 xl:gap-8
+                  flex gap-4 xl:gap-6
                   mt-4 xl:mt-5
                   ">
                     
@@ -453,7 +454,7 @@
                       items-center
                       gap-2
                       !font-[source_code_pro]
-                      bg-[var(--bg-dark)]
+                      bg-blue-500
                       text-white
                       px-3
                       py-2

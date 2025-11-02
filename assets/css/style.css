@@ -160,7 +160,7 @@ h6,
     .animated-border-box:before,
     .animated-border-box-glow:before {
         content: '';
-        z-index: -2;
+        z-index: 0;
         text-align: center;
         top: 50%;
         left: 50%;
@@ -177,11 +177,11 @@ h6,
     .animated-border-box:after {
         content: '';
         position: absolute;
-        z-index: -1;
-        left: 2.5px;
-        top: 2.5px;
-        width: calc(100% - 5px);
-        height: calc(100% - 5px);
+        z-index: 1;
+        left: 1px;
+        top: 1px;
+        width: calc(100% - 2px);
+        height: calc(100% - 2px);
         border-radius: 7px;
         background: #090909;
     }
