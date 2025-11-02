@@ -36,13 +36,12 @@
       </div>
 
       <!-- navbar -->
-      <nav
-        class="z-50 w-full text-white rounded-t-3xl fixed
-         bottom-0  lg:w-[50%] lg:bg-[#090909] 
+      <nav class="z-50 w-full text-white rounded-t-3xl fixed
+         bottom-0  lg:max-w-[50rem] lg:bg-[#090909] 
          lg:rounded-3xl lg:bottom-6 lg:left-[50%] lg:transform 
          lg:translate-x-[-50%] lg:backdrop-blur-3xl lg:inset-shadow-sm 
          lg:inset-shadow-green-900">
-        
+
         <!-- curve shape -->
         <div class="z-[-1] fixed left-[50%] transform translate-x-[-50%] bottom-0 lg:hidden">
           <svg xmlns="http://www.w3.org/2000/svg" width="388" height="92" viewBox="0 0 375 92" fill="none"
@@ -69,15 +68,14 @@
             </defs>
           </svg>
         </div>
-        
+
         <!-- menu items -->
         <div>
           <div class="flex justify-between">
-            <ul
-              class="flex w-[40%] h-[5.78rem]  bg-[#090909] 
+            <ul class="flex w-[40%] h-[5.78rem]  bg-[#090909] 
               rounded-tl-2xl rounded-tr-lg justify-around sm:rounded-tr-0 lg:h-[5.3rem] 
                lg:bg-transparent">
-              
+
               <li class="cursor-pointer py-7 px-5">
                 <a href="#"
                   class="flex flex-col text-center hover:text-green-500 transition duration-300 justify-center">
@@ -87,7 +85,7 @@
                   </p>
                 </a>
               </li>
-              
+
               <li class="cursor-pointer py-7 px-5">
                 <a href="#"
                   class="flex flex-col text-center hover:text-green-500 transition duration-300 justify-center">
@@ -99,13 +97,12 @@
                   </p>
                 </a>
               </li>
-              
+
             </ul>
 
             <div class="start_project">
               <div class=" animated-border-box-glow "></div>
-              <a href="#"
-                class="flex flex-col h-14.5 w-14.5 text-center text-3xl
+              <a href="#" class="flex flex-col h-14.5 w-14.5 text-center text-3xl
                  text-white rounded-xl border border-green-600/30 
                  justify-center dark-bg items-center relative 
                  top-[-1.2rem] lg:h-12 lg:top-[1.5rem] lg:w-30 xl:w-50 
@@ -117,14 +114,12 @@
               </a>
             </div>
 
-            <ul
-              class="flex w-[40%] h-[5.78rem]  px-2
+            <ul class="flex w-[40%] h-[5.78rem]  px-2
                bg-[#090909] rounded-tl-lg rounded-tr-2xl justify-around 
               lg:h-[5.5rem]  lg:bg-transparent">
-              
+
               <li class="cursor-pointer py-7 px-5">
-                <a href="#"
-                  class="flex flex-col text-center hover:text-green-500 
+                <a href="#" class="flex flex-col text-center hover:text-green-500 
                   transition duration-300 justify-center">
                   <p class="lg:hidden">
                     <i class="far fa-usd-circle"></i>
@@ -134,10 +129,9 @@
                   </p>
                 </a>
               </li>
-              
+
               <li class="mega_view group cursor-pointer py-7 px-5">
-                <a href="javascript:void(0)"
-                  class="flex flex-col text-center
+                <a href="javascript:void(0)" class="flex flex-col text-center
                    hover:text-green-500 transition 
                    duration-300 justify-center 
                    group-hover:text-green-500
@@ -150,7 +144,7 @@
                   </p>
                 </a>
                 <!-- mega card on hover -->
-                  <div class="
+                <div class="
                     bg-white w-full lg:w-[800px] absolute top-100 left-0 text-black
                      rounded-t-3xl overflow-hidden -z-10 lg:z-50
                      transition-all duration-500 meta_card
@@ -160,8 +154,8 @@
                      lg:after:content-['']
                      lg:after:absolute
                      lg:after:bottom-[-0.8rem]
-                     lg:after:right-40
-                     xl:after:right-25
+                     lg:after:right-16
+                     xl:after:right-16
                      lg:after:w-0
                      lg:after:h-0
                      lg:after:border-16
@@ -175,40 +169,42 @@
                      lg:tranistion-all lg:duration-400
                      group-hover:visible group-hover:opacity-100
                   ">
-                  
-                    <div class="
+
+                  <div class="
                     bg-gray-100
                     overflow-hidden
                     border border-gray-300
                     rounded-3xl work_card cursor-pointer
                     hidden lg:block
                     ">
-                       <a href="#">
-                          <div class="mb-3 p-4 pb-6">
-                            <h3 class="font-bold flex justify-between mb-2 text-[var(--bg-dark)] text-2xl">
-                              <span>Our Latest Work</span>
-                              <span class="rotate-45 work_icon transition-all duration-300">
-                                <i class="fal fa-arrow-up"></i>
-                              </span>
-                            </h3>
-                            <p class="text-gray-400 text-thin">
-                              Discover our most recent projects, showcasing creativity, innovation, and quality. Each work reflects our dedication to turning ideas into exceptional results.
-                            </p>
-                          </div>
-                          <div class="
+                    <a href="#">
+                      <div class="mb-3 p-4 pb-6">
+                        <h3 class="font-bold flex justify-between mb-2 text-[var(--bg-dark)] text-2xl">
+                          <span>Our Latest Work</span>
+                          <span class="rotate-45 work_icon transition-all duration-300">
+                            <i class="fal fa-arrow-up"></i>
+                          </span>
+                        </h3>
+                        <p class="text-gray-400 text-thin">
+                          Discover our most recent projects, showcasing creativity, innovation, and quality. Each work
+                          reflects our dedication to turning ideas into exceptional results.
+                        </p>
+                      </div>
+                      <div class="
                            overflow-hidden
                            h-[260px]
                           ">
-                            <img class="w-full h-full work_img transition-all duration-300 " src="./assets//images/work-service.png" alt="work-service">
-                          </div>
-                       </a>
-                    </div>
-                  
-                    <div>
-                      <ul>
-                        
-                        <li>
-                          <a href="#" class="
+                        <img class="w-full h-full work_img transition-all duration-300 "
+                          src="./assets//images/work-service.png" alt="work-service">
+                      </div>
+                    </a>
+                  </div>
+
+                  <div>
+                    <ul>
+
+                      <li>
+                        <a href="#" class="
                             flex justify-between gap-2 
                             pt-5 pl-4 pb-4 pr-4 items-center
                             border-b border-gray-200
@@ -217,18 +213,19 @@
                             transition-all duration-500
                             lg:border-0 lg:hover:rounded-2xl
                           ">
-                            <div>
-                              <p class="text-xl">Home</p>
-                              <span class="text-gray-600 lg:text-gray-400 lg:font-light">Where ideas turn into clean code</span>
-                            </div>
-                            <p class="invisible hidden  lg:block transition-all duration-300 arrow-right">
-                              <img class="w-5" src="./assets/images/icons/arrow-right.svg" alt="right-arrow">
-                            </p>
-                          </a>
-                        </li>
-                        
-                        <li>
-                          <a href="#" class="
+                          <div>
+                            <p class="text-xl">Home</p>
+                            <span class="text-gray-600 lg:text-gray-400 lg:font-light">Where ideas turn into clean
+                              code</span>
+                          </div>
+                          <p class="invisible hidden  lg:block transition-all duration-300 arrow-right">
+                            <img class="w-5" src="./assets/images/icons/arrow-right.svg" alt="right-arrow">
+                          </p>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="#" class="
                             flex justify-between gap-2 
                             pt-5 pl-4 pb-4 pr-4 items-center
                             border-b border-gray-200
@@ -237,20 +234,20 @@
                             transition-all duration-500
                             lg:border-0 lg:hover:rounded-2xl menu_item
                           ">
-                            <div>
-                              <p class="text-xl">About Me</p>
+                          <div>
+                            <p class="text-xl">About Me</p>
                             <span class="text-gray-600 lg:text-gray-400 lg:font-light">
                               Where art meets logic
                             </span>
-                            </div>
-                            <p class="invisible hidden lg:block transition-all duration-300 arrow-right">
-                              <img class="w-5" src="./assets/images/icons/arrow-right.svg" alt="right-arrow">
-                            </p>
-                          </a>
-                        </li>
-                        
-                        <li>
-                          <a href="#" class="
+                          </div>
+                          <p class="invisible hidden lg:block transition-all duration-300 arrow-right">
+                            <img class="w-5" src="./assets/images/icons/arrow-right.svg" alt="right-arrow">
+                          </p>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="#" class="
                             flex justify-between gap-2 
                             pt-5 pl-4 pb-4 pr-4 items-center
                             border-b border-gray-200
@@ -260,21 +257,21 @@
                             lg:border-0 lg:hover:rounded-2xl
                             menu_item
                           ">
-                            <div>
-                              <p class="text-xl">Blogs</p>
+                          <div>
+                            <p class="text-xl">Blogs</p>
                             <span class="text-gray-600 lg:text-gray-400 lg:font-light">
                               A collection of thoughts and insights
                             </span>
-                            </div>
-                            
-                            <p class="invisible hidden lg:block transition-all duration-300 arrow-right">
-                              <img class="w-5" src="./assets/images/icons/arrow-right.svg" alt="right-arrow">
-                            </p>
-                          </a>
-                        </li>
-                        
-                        <li>
-                          <a href="#" class="
+                          </div>
+
+                          <p class="invisible hidden lg:block transition-all duration-300 arrow-right">
+                            <img class="w-5" src="./assets/images/icons/arrow-right.svg" alt="right-arrow">
+                          </p>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="#" class="
                             flex justify-between gap-2 
                             pt-5 pl-4 pb-4 pr-4 items-center
                             border-b border-gray-200
@@ -284,44 +281,44 @@
                             lg:border-0 lg:hover:rounded-2xl
                             menu_item
                           ">
-                            <div>
-                              <p class="text-xl">Contact Us</p>
+                          <div>
+                            <p class="text-xl">Contact Us</p>
                             <span class="text-gray-600 lg:text-gray-400 lg:font-light">
                               Start your journey to building amazing software
                             </span>
-                            </div>
-                            
-                            <p class="invisible hidden lg:block transition-all duration-300 arrow-right">
-                              <img class="w-6" src="./assets/images/icons/arrow-right.svg" alt="right-arrow">
-                            </p>
-                          </a>
-                        </li>
-                        
-                        <li class="lg:hidden">
-                          <a href="#" class="
+                          </div>
+
+                          <p class="invisible hidden lg:block transition-all duration-300 arrow-right">
+                            <img class="w-6" src="./assets/images/icons/arrow-right.svg" alt="right-arrow">
+                          </p>
+                        </a>
+                      </li>
+
+                      <li class="lg:hidden">
+                        <a href="#" class="
                             block pt-5 pl-4 pb-4 pr-4
                             h-50
                           ">
-                            <p class="text-xl"></p>
-                            <span class="text-gray-600"></span>
-                          </a>
-                        </li>
-                        
-                      </ul>
-                    </div>
-                    
+                          <p class="text-xl"></p>
+                          <span class="text-gray-600"></span>
+                        </a>
+                      </li>
+
+                    </ul>
                   </div>
+
+                </div>
               </li>
             </ul>
           </div>
         </div>
-        
+
       </nav>
     </header>
 
-    <!-- hero section -->
-    <section class="h-screen relative text-white hero dark-bg">
-      <div class="container w-11/12 mx-auto py-5">
+    <!-- turning complex logic into seamless web experiences -->
+    <section class=" relative text-white hero dark-bg">
+      <div class="container w-11/12 lg:w-8/12 xl:w-8/12 mx-auto py-5">
         <div class="flex flex-col text-center gap-5">
           <div class="relative">
             <div class="
@@ -403,7 +400,7 @@
                       md:col-span-2
                     ">
                   <h2 class="!font-[source_code_pro] font-semibold xl:text-3xl text-lg">
-                    
+
                     Md. Limon Ahmed [Emon]
                   </h2>
                   <span class="font-medium xl:text-2xl">Software Engineer</span>
@@ -422,12 +419,12 @@
                       Tools: Docker, AWS, Postman, Git
                     </p>
                   </div>
-                  
+
                   <div class="
                   flex gap-4 xl:gap-6
                   mt-4 xl:mt-5
                   ">
-                    
+
                     <a href="https://github.com/coderemon24" target="_blank" class="
                      
                       flex
@@ -447,7 +444,7 @@
                       </span>
                       <span>GitHub</span>
                     </a>
-                    
+
                     <a href="https://www.linkedin.com/in/nullspectre" target="_blank" class="
                       
                       flex
@@ -467,7 +464,7 @@
                       </span>
                       <span>LinkedIn</span>
                     </a>
-                    
+
                   </div>
 
                 </div>
@@ -554,6 +551,200 @@
         </div>
       </div>
 
+    </section>
+
+    <!-- build with passion -->
+    <section class="
+      projects py-16 rounded-4xl
+      pb-40 lg:rounded-[3rem]
+     ">
+      <div class="containe mx-auto w-11/12 lg:8/12 xl:w-8/12 px-2">
+        <div>
+          <div class="mb-7 lg:mb-14">
+            <p class="
+                w-[160px] mb-5 border border-green-600 rounded-full
+                text-center text-green-600 py-1.5
+              ">Built with Passion</p>
+
+            <h2 class="
+                text-3xl max-w-[400px] font-bold text-black/90
+                lg:max-w-[600px] lg:text-5xl
+              ">
+              Innovation Delivered in
+              <p class="font-[playfair_display] italic">
+                Every Line of Code
+              </p>
+            </h2>
+          </div>
+
+          <div class="
+            flex flex-col gap-10
+          ">
+            
+            <!-- project item -->
+            <a href="javascript:void(0)" class="
+                bg-indigo-200 p-5 rounded-2xl mb-10
+                md:grid md:grid-cols-2 md:gap-40 
+                md:px-8 md:items-center
+              ">
+              <div>
+                <span class="text-2xl italic font-[playfair_display] 
+                   font-semibold mb-4 block
+                   ">Travel Agency</span>
+                <h3 class="text-xl md:text-2xl lg:text-3xl font-bold md:mb-4 mb-2">
+                  Easy Booking For Dream Trips
+                </h3>
+                <p class="text-gray-600 md:font-normal lg:text-lg font-light">
+                  Plan,book,and enjoy your dream vacations effortlessly.Our platform makes travel simple with seamless booking, personalized packages and unforgettable experiences.
+                </p>
+                <div class="mt-7 lg:mt-12 mb-6 flex justify-between">
+                  <div class="flex flex-col gap-1">
+                    <span class="text-gray-700">Pages in Project</span>
+                    <h4 class="font-bold text-xl">25+</h4>
+                  </div>
+                  <div class="flex flex-col gap-1">
+                    <span class="text-gray-700">Retention Growth</span>
+                    <h4 class="font-bold text-xl">38%</h4>
+                  </div>
+                </div>
+                
+                <div class="
+                  md:flex
+                 bg-indigo-400/80
+                 p-3 px-5 hidden gap-3 items-center justify-between
+                 rounded-lg
+                 ">
+                  <div class="
+                      flex gap-3 items-center
+                    ">
+                    <img class="w-12 h-12 rounded-full" src="./assets/images/emon.png" alt="emon">
+                    <div class="leading-5">
+                      <p class="text-bold">Ahmed Al-Emon</p>
+                      <span class="text-sm">Founder & CEO</span>
+                    </div>
+                  </div>
+                  <span>
+                    <img class="w-6" src="./assets/images/icons/arrow-right.svg" alt="right-arrow">
+                  </span>
+                </div>
+              </div>
+
+              <div class="
+                flex flex-col gap-5
+                sm:flex-col-reverse
+              ">
+                <div class="">
+                  <img class="w-full" src="./assets/images/projects/travel.avif" alt="Easy Booking For Dream Trips">
+                </div>
+                
+                <div class="
+                 bg-indigo-400/80
+                 md:hidden 
+                 p-3 px-4 flex gap-3 items-center justify-between
+                 rounded-lg
+                 ">
+                  <div class="
+                      flex gap-3 items-center
+                    ">
+                    <img class="w-12 h-12 rounded-full" src="./assets/images/emon.png" alt="emon">
+                    <div class="leading-5">
+                      <p class="text-bold">Ahmed Al-Emon</p>
+                      <span class="text-sm">Founder & CEO</span>
+                    </div>
+                  </div>
+                  <span>
+                    <img class="w-6" src="./assets/images/icons/arrow-right.svg" alt="right-arrow">
+                  </span>
+                </div>
+                
+              </div>
+
+            </a>
+            
+            <!-- project item -->
+            <a href="javascript:void(0)" class="
+                bg-rose-200 p-5 rounded-2xl mb-10
+                md:grid md:grid-cols-2 md:gap-40 
+                md:px-8 md:items-center
+              ">
+              <div>
+                <span class="text-2xl italic font-[playfair_display] 
+                   font-semibold mb-4 block
+                   ">Restaurant</span>
+                <h3 class="text-xl md:text-2xl lg:text-3xl font-bold md:mb-4 mb-2">
+                  Transforming Your Dining
+                </h3>
+                <p class="text-gray-600 md:font-normal lg:text-lg font-light">
+                  Plan,book,and enjoy your dream vacations effortlessly.Our platform makes travel simple with seamless booking, personalized packages and unforgettable experiences.
+                </p>
+                <div class="mt-7 lg:mt-12 mb-6 flex justify-between">
+                  <div class="flex flex-col gap-1">
+                    <span class="text-gray-700">Pages in Project</span>
+                    <h4 class="font-bold text-xl">25+</h4>
+                  </div>
+                  <div class="flex flex-col gap-1">
+                    <span class="text-gray-700">Retention Growth</span>
+                    <h4 class="font-bold text-xl">38%</h4>
+                  </div>
+                </div>
+                
+                <div class="
+                  md:flex
+                 bg-rose-300
+                 p-3 px-5 hidden gap-3 items-center justify-between
+                 rounded-lg
+                 ">
+                  <div class="
+                      flex gap-3 items-center
+                    ">
+                    <img class="w-12 h-12 rounded-full" src="./assets/images/emon.png" alt="emon">
+                    <div class="leading-5">
+                      <p class="text-bold">Ahmed Al-Emon</p>
+                      <span class="text-sm">Founder & CEO</span>
+                    </div>
+                  </div>
+                  <span>
+                    <img class="w-6" src="./assets/images/icons/arrow-right.svg" alt="right-arrow">
+                  </span>
+                </div>
+              </div>
+
+              <div class="
+                flex flex-col gap-5
+                sm:flex-col-reverse
+              ">
+                <div class="">
+                  <img class="w-full" src="./assets/images/projects/restaurant.avif" alt="Easy Booking For Dream Trips">
+                </div>
+                
+                <div class="
+                 bg-rose-300
+                 md:hidden 
+                 p-3 px-4 flex gap-3 items-center justify-between
+                 rounded-lg
+                 ">
+                  <div class="
+                      flex gap-3 items-center
+                    ">
+                    <img class="w-12 h-12 rounded-full" src="./assets/images/emon.png" alt="emon">
+                    <div class="leading-5">
+                      <p class="text-bold">Ahmed Al-Emon</p>
+                      <span class="text-sm">Founder & CEO</span>
+                    </div>
+                  </div>
+                  <span>
+                    <img class="w-6" src="./assets/images/icons/arrow-right.svg" alt="right-arrow">
+                  </span>
+                </div>
+                
+              </div>
+
+            </a>
+
+          </div>
+
+        </div>
+      </div>
     </section>
 
   </main>

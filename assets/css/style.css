@@ -210,3 +210,15 @@ h6,
 .menu_item:hover .arrow-right{
     visibility: visible;
 }
+
+/*
+* @build with passion -> projects
+*/
+
+.projects{
+    background: url(../images/project-bg.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
