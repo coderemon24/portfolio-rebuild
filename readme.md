@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img src="./assets/images/logo/coderemon-color-x.png" alt="Project Logo" width="200"/>
+  <img src="./assets/images/logo/coderemon-x.png" alt="Project Logo" width="200"/>
 </p>
 
 
