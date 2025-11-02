@@ -29,7 +29,6 @@ $(function () {
   let meta_card = $(".meta_card");
   let deviceWidth = $(window).width();
 
-  if (deviceWidth < 992) {
     mega_view.mouseenter(function () {
       meta_card.removeClass("top-100").addClass("-top-100");
     });
@@ -44,20 +43,4 @@ $(function () {
       });
       meta_card.addClass("top-100").removeClass("-top-100");
     });
-  }else{
-    // mega_view.mouseenter(function () {
-    //     meta_card.removeClass('lg:invisible lg:opacity-0');
-    // });
-    
-    // mega_view.mouseleave(function () {
-    //     meta_card.mouseenter(function () {
-    //         meta_card.removeClass('lg:invisible lg:opacity-0');
-    //     })
-        
-    //     meta_card.mouseleave(function () {
-    //         meta_card.addClass('lg:invisible lg:opacity-0');
-    //     })
-    //     meta_card.addClass('lg:invisible lg:opacity-0');
-    // });
-  }
 });
