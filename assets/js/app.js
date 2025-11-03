@@ -29,21 +29,46 @@ $(function () {
   let meta_card = $(".meta_card");
   let deviceWidth = $(window).width();
 
-  mega_view.mouseenter(function () {
-    meta_card.removeClass("top-100").addClass("-top-100");
-  });
+  if (deviceWidth < 992) {
+    // Handle mobile tap toggle
+    mega_view.on("click touchstart", function (e) {
+      e.stopPropagation(); // Prevent accidental double triggers
 
-  mega_view.mouseleave(function () {
-    meta_card.mouseenter(function () {
-      meta_card.removeClass("top-100").addClass("-top-100");
+      if (meta_card.hasClass("top-100")) {
+        meta_card.removeClass("top-100").addClass("-top-100");
+      } else {
+        meta_card.addClass("top-100").removeClass("-top-100");
+      }
     });
 
-    meta_card.mouseleave(function () {
-      meta_card.addClass("top-100").removeClass("-top-100");
+    // hide when tapping outside
+    $(document).on("click touchstart", function (e) {
+      if (
+        !$(e.target).closest(mega_view).length &&
+        !$(e.target).closest(meta_card).length
+      ) {
+        meta_card.addClass("top-100").removeClass("-top-100");
+      }
     });
-    meta_card.addClass("top-100").removeClass("-top-100");
-  });
+  } else {
+    // Desktop hover behavior
+    if (deviceWidth < 992) {
+      mega_view.mouseenter(function () {
+        meta_card.removeClass("top-100").addClass("-top-100");
+      });
+
+      mega_view.mouseleave(function () {
+        meta_card.mouseenter(function () {
+          meta_card.removeClass("top-100").addClass("-top-100");
+        });
+
+        meta_card.mouseleave(function () {
+          meta_card.addClass("top-100").removeClass("-top-100");
+        });
+        meta_card.addClass("top-100").removeClass("-top-100");
+      });
+    }
+  }
 });
 
 //  GSAP
-
