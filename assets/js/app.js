@@ -31,21 +31,26 @@ $(function () {
 
   if (deviceWidth < 992) {
     mega_view.mouseenter(function () {
-      meta_card.removeClass("top-100 invisible opacity-0").addClass("-top-100 visible opacity-100");
+      meta_card
+        .removeClass("top-100 invisible opacity-0")
+        .addClass("-top-100 visible opacity-100");
     });
 
     mega_view.mouseleave(function () {
       meta_card.mouseenter(function () {
-        meta_card.removeClass("top-100 invisible opacity-0").addClass("-top-100 visible opacity-100");
+        meta_card
+          .removeClass("top-100 invisible opacity-0")
+          .addClass("-top-100 visible opacity-100");
       });
 
       meta_card.mouseleave(function () {
-        meta_card.addClass("top-100 invisible opacity-0").removeClass("-top-100 visible opacity-100");
+        meta_card
+          .addClass("top-100 invisible opacity-0")
+          .removeClass("-top-100 visible opacity-100");
       });
-      meta_card.addClass("top-100 invisible opacity-0").removeClass("-top-100 visible opacity-100");
+      meta_card
+        .addClass("top-100 invisible opacity-0")
+        .removeClass("-top-100 visible opacity-100");
     });
   }
-  
 });
-
-
