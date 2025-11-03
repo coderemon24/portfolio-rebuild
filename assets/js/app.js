@@ -30,31 +30,22 @@ $(function () {
   let deviceWidth = $(window).width();
 
   if (deviceWidth < 992) {
-    let isOpen = false; 
-    mega_view.on("click touchstart", function (e) {
-      e.stopPropagation();
-      if (!isOpen) {
-        meta_card
-          .removeClass("top-100 invisible opacity-0")
-          .addClass("-top-100 visible opacity-100");
-        isOpen = true;
-      } else {
-        meta_card
-          .addClass("top-100 invisible opacity-0")
-          .removeClass("-top-100 visible opacity-100");
-        isOpen = false;
-      }
+    mega_view.mouseenter(function () {
+      meta_card.removeClass("top-100 invisible opacity-0").addClass("-top-100 visible opacity-100");
     });
 
-    // Close when tapping outside
-    $(document).on("click touchstart", function (e) {
-      if (!$(e.target).closest(".mega_view, .meta_card").length && isOpen) {
-        meta_card
-          .addClass("top-100 invisible opacity-0")
-          .removeClass("-top-100 visible opacity-100");
-        isOpen = false;
-      }
+    mega_view.mouseleave(function () {
+      meta_card.mouseenter(function () {
+        meta_card.removeClass("top-100 invisible opacity-0").addClass("-top-100 visible opacity-100");
+      });
+
+      meta_card.mouseleave(function () {
+        meta_card.addClass("top-100 invisible opacity-0").removeClass("-top-100 visible opacity-100");
+      });
+      meta_card.addClass("top-100 invisible opacity-0").removeClass("-top-100 visible opacity-100");
     });
   }
   
 });
+
+
