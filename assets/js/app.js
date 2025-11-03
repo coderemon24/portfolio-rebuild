@@ -30,21 +30,32 @@ $(function () {
   let deviceWidth = $(window).width();
 
   if (deviceWidth < 992) {
-    mega_view.mouseenter(function () {
+  let isOpen = false; // track open/close state
+
+  // Handle tap on "More"
+  mega_view.on('click touchstart', function (e) {
+    e.stopPropagation(); // prevent click bubbling
+
+    if (!isOpen) {
+      // Show dropdown
       meta_card.removeClass("top-100 invisible opacity-0").addClass("-top-100 visible opacity-100");
-    });
-
-    mega_view.mouseleave(function () {
-      meta_card.mouseenter(function () {
-        meta_card.removeClass("top-100 invisible opacity-0").addClass("-top-100 visible opacity-100");
-      });
-
-      meta_card.mouseleave(function () {
-        meta_card.addClass("top-100 invisible opacity-0").removeClass("-top-100 visible opacity-100");
-      });
+      isOpen = true;
+    } else {
+      // Hide dropdown (second tap)
       meta_card.addClass("top-100 invisible opacity-0").removeClass("-top-100 visible opacity-100");
-    });
-  }
+      isOpen = false;
+    }
+  });
+
+  // Close when tapping outside
+  $(document).on('click touchstart', function (e) {
+    if (!$(e.target).closest('.mega_view, .meta_card').length && isOpen) {
+      meta_card.addClass("top-100 invisible opacity-0").removeClass("-top-100 visible opacity-100");
+      isOpen = false;
+    }
+  });
+}
+
   
 });
 
