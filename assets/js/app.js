@@ -30,33 +30,38 @@ $(function () {
   let deviceWidth = $(window).width();
 
   if (deviceWidth < 992) {
-  let isOpen = false; // track open/close state
+    let isOpen = false; 
 
-  // Handle tap on "More"
-  mega_view.on('click touchstart', function (e) {
-    e.stopPropagation(); // prevent click bubbling
+    // Toggle dropdown on tap
+    mega_view.off("click touchstart").on("click touchstart", function (e) {
+      e.preventDefault();
+      e.stopPropagation(); 
 
-    if (!isOpen) {
-      // Show dropdown
-      meta_card.removeClass("top-100 invisible opacity-0").addClass("-top-100 visible opacity-100");
-      isOpen = true;
-    } else {
-      // Hide dropdown (second tap)
-      meta_card.addClass("top-100 invisible opacity-0").removeClass("-top-100 visible opacity-100");
-      isOpen = false;
-    }
-  });
+      if (!isOpen) {
+        // Show dropdown
+        meta_card
+          .removeClass("top-100 invisible opacity-0")
+          .addClass("-top-100 visible opacity-100");
+        isOpen = true;
+      } else {
+        // Hide dropdown
+        meta_card
+          .addClass("top-100 invisible opacity-0")
+          .removeClass("-top-100 visible opacity-100");
+        isOpen = false;
+      }
+    });
 
-  // Close when tapping outside
-  $(document).on('click touchstart', function (e) {
-    if (!$(e.target).closest('.mega_view, .meta_card').length && isOpen) {
-      meta_card.addClass("top-100 invisible opacity-0").removeClass("-top-100 visible opacity-100");
-      isOpen = false;
-    }
-  });
-}
-
-  
+    // Hide dropdown when tapping outside
+    $(document)
+      .off("click touchstart")
+      .on("click touchstart", function (e) {
+        if (!$(e.target).closest(".mega_view, .meta_card").length && isOpen) {
+          meta_card
+            .addClass("top-100 invisible opacity-0")
+            .removeClass("-top-100 visible opacity-100");
+          isOpen = false;
+        }
+      });
+  }
 });
-
-//  GSAP
