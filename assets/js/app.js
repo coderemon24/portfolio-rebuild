@@ -54,8 +54,44 @@ $(function () {
     });
   }
   
-  // footer year update
-  let year = new Date().getFullYear();
-  document.getElementById("year").innerHTML = year;
+ // footer year update
+document.getElementById("year").innerHTML = new Date().getFullYear();
+
+// author info quotes
+let quotes = [
+  "❝ Simplifying Complexity. Delivering Seamless Web Experiences. ❞",
+  "❝ Crafting Digital Stories with Code and Creativity. ❞",
+  "❝ Transforming Ideas into Interactive Realities. ❞",
+  "❝ Where Innovation Meets Functionality in Web Design. ❞",
+  "❝ Building Bridges Between Users and Digital Worlds. ❞",
+];
+
+let index = 0;
+let intervalId = null;
+let quoteEl = document.getElementById("quotes");
+
+// show first quote
+quoteEl.innerHTML = quotes[index];
+
+// function to start quote rotation
+function startQuoteRotation() {
+  intervalId = setInterval(() => {
+    index = (index + 1) % quotes.length;
+    quoteEl.innerHTML = quotes[index];
+  }, 3000);
+}
+
+// stop rotation
+function stopQuoteRotation() {
+  clearInterval(intervalId);
+}
+
+// hover events
+quoteEl.addEventListener("mouseenter", stopQuoteRotation);
+quoteEl.addEventListener("mouseleave", startQuoteRotation);
+
+// start initially
+startQuoteRotation();
+
   
 });
