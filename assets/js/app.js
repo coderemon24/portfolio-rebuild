@@ -53,4 +53,9 @@ $(function () {
         .removeClass("-top-100 visible opacity-100");
     });
   }
+  
+  // footer year update
+  let year = new Date().getFullYear();
+  document.getElementById("year").innerHTML = year;
+  
 });
