@@ -768,7 +768,7 @@
         justify-between items-center gap-6
         border-b border-green-950
         ">
-          <h2 class="text-3xl font-bold text-white text-center leading-6 lg:text-4xl lg:leading-10">
+          <h2 class="text-3xl font-bold text-white text-center leading-8 lg:text-4xl lg:leading-10">
             Ready to
             <span class="font-[Playfair_Display] text-green-500 italic">Elevate</span>
             Your Project?
@@ -786,7 +786,7 @@
         </div>
         
         <!-- links -->
-        <div class="grid grid-cols-4 px-6 md:px-0 py-10 mt-5 gap-4">
+        <div class="grid grid-cols-2 lg:grid-cols-4 px-6 md:px-0 py-10 mt-5 gap-4">
           
             <div class="">
               <h4 class="text-xl font-semibold text-white/90">Important Links</h4>
@@ -839,7 +839,7 @@
     <!-- author info -->
     <div class="border-b border-green-950 border-t">
       <div class="container px-6 md:px-0 py-10 mx-auto">
-        <div class="flex justify-between items-center">
+        <div class="flex flex-col lg:flex-row gap-5 justify-between items-center">
           <div class="flex items-center gap-4">
             <img src="./assets/images/emon.png" alt="emon" class="w-12 h-12 border-2 border-green-600 rounded-full">
             <div class="leading-5">
@@ -848,7 +848,7 @@
             </div>
           </div>
           
-          <h4 class="text-xl font-semibold text-green-50 italic">
+          <h4 class="text-xl text-center font-semibold text-green-50 italic">
             ❝ Simplifying Complexity. Delivering Seamless Web Experiences. ❞
           </h4>
           
@@ -870,10 +870,13 @@
     <!-- copyright info -->
     <div class="">
       <div class="container px-6 md:px-0 py-6 mx-auto">
-      <div class="flex justify-between items-center">
-        <a href="#" class="hover:text-green-500 transition duration-300">Terms & Conditions</a>
+      <div class="flex flex-col lg:flex-row justify-between items-center">
+        <a href="#" class="hidden lg:block hover:text-green-500 transition duration-300">Terms & Conditions</a>
         <p>&copy; <span id="year">2023</span> Coderemon. All rights reserved.</p>
-        <a href="#" class="hover:text-green-500 transition duration-300">Privacy Policy</a>
+        <div class="flex flex-row gap-4">
+          <a href="#" class="block lg:hidden hover:text-green-500 transition duration-300">Terms & Conditions</a>
+          <a href="#" class="hover:text-green-500 transition duration-300">Privacy Policy</a>
+        </div>
       </div>
     </div>
     </div>
