@@ -97,16 +97,95 @@ startQuoteRotation();
 function initTrustMarquee() {
   if (typeof gsap === "undefined") return;
 
-  const tracks = document.querySelectorAll(".trust-track");
+  const tracks = Array.from(document.querySelectorAll(".trust-track"));
   if (!tracks.length) return;
 
-  let activeTweens = [];
+  let states = [];
 
-  function buildTrack(track) {
+  function normalizeX(value, distance) {
+    if (!distance) return 0;
+    if (value <= -distance || value > 0) {
+      value = (((value + distance) % distance) + distance) % distance - distance;
+    }
+    return value;
+  }
+
+  function bindInteractions(track) {
+    if (track.dataset.marqueeBound === "true") return;
+    track.dataset.marqueeBound = "true";
+
+    const draggable = track.dataset.draggable === "true";
+    track.style.touchAction = "pan-y";
+    track.style.willChange = "transform";
+    if (draggable) {
+      track.style.cursor = "grab";
+    }
+
+    track.addEventListener("mouseenter", function () {
+      const state = track._marqueeState;
+      if (!state) return;
+      state.paused = true;
+    });
+
+    track.addEventListener("mouseleave", function () {
+      const state = track._marqueeState;
+      if (!state) return;
+      if (!state.dragging) {
+        state.paused = false;
+      }
+    });
+
+    if (!draggable) return;
+
+    track.addEventListener("pointerdown", function (event) {
+      if (event.pointerType === "mouse" && event.button !== 0) return;
+
+      const state = track._marqueeState;
+      if (!state || !state.distance) return;
+
+      state.dragging = true;
+      state.paused = true;
+      state.pointerId = event.pointerId;
+      state.startPointerX = event.clientX;
+      state.startTrackX = state.x;
+      track.style.cursor = "grabbing";
+
+      track.setPointerCapture(event.pointerId);
+      event.preventDefault();
+    });
+
+    track.addEventListener("pointermove", function (event) {
+      const state = track._marqueeState;
+      if (!state || !state.dragging || state.pointerId !== event.pointerId) return;
+
+      const deltaX = event.clientX - state.startPointerX;
+      state.x = normalizeX(state.startTrackX + deltaX, state.distance);
+      gsap.set(track, { x: state.x });
+    });
+
+    function endDrag(event) {
+      const state = track._marqueeState;
+      if (!state || !state.dragging || state.pointerId !== event.pointerId) return;
+
+      state.dragging = false;
+      state.pointerId = null;
+      track.style.cursor = "grab";
+      state.paused = track.matches(":hover");
+
+      if (track.hasPointerCapture(event.pointerId)) {
+        track.releasePointerCapture(event.pointerId);
+      }
+    }
+
+    track.addEventListener("pointerup", endDrag);
+    track.addEventListener("pointercancel", endDrag);
+  }
+
+  function buildTrackState(track) {
     const originals = Array.from(track.children).filter(
       (node) => node.getAttribute("data-clone") !== "true"
     );
-    if (!originals.length) return;
+    if (!originals.length) return null;
 
     track
       .querySelectorAll("[data-clone='true']")
@@ -130,35 +209,48 @@ function initTrustMarquee() {
         0
       ) + gap * Math.max(originals.length - 1, 0);
 
-    if (!distance) return;
+    if (!distance) return null;
 
-    const direction = track.dataset.direction === "right" ? "right" : "left";
+    const isRightDirection = track.dataset.direction === "right";
     const duration = Number(track.dataset.duration || 16);
-    const startX = direction === "right" ? -distance : 0;
-    const endX = direction === "right" ? 0 : -distance;
-    const wrapX = gsap.utils.wrap(-distance, 0);
+    const startX = isRightDirection ? -distance : 0;
+    const speedPerSecond = (distance / duration) * (isRightDirection ? 1 : -1);
 
     gsap.set(track, { x: startX });
 
-    activeTweens.push(
-      gsap.to(track, {
-        x: endX,
-        duration,
-        ease: "none",
-        repeat: -1,
-        modifiers: {
-          x: (value) => `${wrapX(parseFloat(value))}px`,
-        },
-      })
-    );
+    const state = {
+      track,
+      distance,
+      speedPerSecond,
+      x: startX,
+      paused: false,
+      dragging: false,
+      pointerId: null,
+      startPointerX: 0,
+      startTrackX: startX,
+    };
+
+    track._marqueeState = state;
+    bindInteractions(track);
+
+    return state;
   }
 
   function setupMarquee() {
-    activeTweens.forEach((tween) => tween.kill());
-    activeTweens = [];
-    tracks.forEach((track) => buildTrack(track));
+    states = tracks.map((track) => buildTrackState(track)).filter(Boolean);
   }
 
+  function tickerUpdate() {
+    const deltaSeconds = gsap.ticker.deltaRatio(60) / 60;
+
+    states.forEach((state) => {
+      if (!state || state.paused || state.dragging) return;
+      state.x = normalizeX(state.x + state.speedPerSecond * deltaSeconds, state.distance);
+      gsap.set(state.track, { x: state.x });
+    });
+  }
+
+  gsap.ticker.add(tickerUpdate);
   setupMarquee();
 
   let resizeTimeout = null;
